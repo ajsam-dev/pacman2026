@@ -1,4 +1,4 @@
-package project.pacman.view_layer;
+package dk.sdu.imada.oop26.view_layer;
 
 import java.net.URL;
 import java.util.logging.Handler;

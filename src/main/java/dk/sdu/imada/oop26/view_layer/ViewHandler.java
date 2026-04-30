@@ -1,4 +1,4 @@
-package project.pacman.view_layer;
+package dk.sdu.imada.oop26.view_layer;
 
 import java.net.URL;
 
@@ -27,7 +27,9 @@ public class ViewHandler {
   }
 
   public void openPacmanScreen(){
-    Pane pane = new Pane();
+    Pane pane = pacmanView.getPacmanScreenUi();
+
+    // ,Color.BLACK
     Scene scene = new Scene(pane, 800, 500);
     stage.setTitle("Pac-man Game");
     stage.setScene(scene);

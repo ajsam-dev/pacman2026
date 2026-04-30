@@ -1,4 +1,4 @@
-package project.pacman.view_layer;
+package dk.sdu.imada.oop26.view_layer;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
