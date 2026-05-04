@@ -85,7 +85,7 @@
             <artifactId>javafx-maven-plugin</artifactId>
             <version>0.0.8</version>
             <configuration>
-                <mainClass>dk.sdu.imada.oop26.view_layer.App</mainClass>
+                <mainClass>dk.sdu.imada.oop26.App</mainClass>
             </configuration>
         </plugin>
       </plugins>

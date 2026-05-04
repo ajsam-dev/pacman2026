@@ -1,19 +1,33 @@
 package dk.sdu.imada.oop26.view_layer;
 
 import javafx.scene.Group;
-import javafx.scene.layout.Pane;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 public class PacmanView {
+  private Group root_group;
+  private Canvas canvas;
+  private GraphicsContext grafcon;
+  private PacmanRenderer pacmanRenderer;
 
-  public Pane getPacmanScreenUi(){
-    Pane pane = new Pane();
-    pane.setStyle("-fx-background-color: black;");
-    return pane;
+  public PacmanView(){
+    pacmanRenderer = new PacmanRenderer(this);
   }
 
-public Group getPacmanScreenUiGroup(){
-    Group a_group = new Group();
-    a_group.setStyle("-fx-background-color: black;");
-    return a_group;
+  public Group getPacmanScreenUi(){
+    root_group = new Group();
+    canvas = new Canvas(400,300);
+    grafcon = canvas.getGraphicsContext2D();
+    root_group.getChildren().add(canvas);
+    grafcon.setFill(Color.RED);
+    grafcon.fillRect(0, 0, 100, 100);
+
+    
+    return root_group;
+  }
+
+  public Canvas getCanvas(){
+    return canvas;
   }
 }
