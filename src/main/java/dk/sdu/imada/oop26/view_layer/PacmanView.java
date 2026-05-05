@@ -11,23 +11,23 @@ public class PacmanView {
   private GraphicsContext grafcon;
   private PacmanRenderer pacmanRenderer;
 
-  public PacmanView(){
+  public PacmanView() {
+    root_group = new Group();
+    canvas = new Canvas(400, 300);
+    root_group.getChildren().add(canvas);
     pacmanRenderer = new PacmanRenderer(this);
+    executeRender();
   }
 
-  public Group getPacmanScreenUi(){
-    root_group = new Group();
-    canvas = new Canvas(400,300);
-    grafcon = canvas.getGraphicsContext2D();
-    root_group.getChildren().add(canvas);
-    grafcon.setFill(Color.RED);
-    grafcon.fillRect(0, 0, 100, 100);
-
-    
+  public Group getPacmanScreenUi() {
     return root_group;
   }
 
-  public Canvas getCanvas(){
+  public void executeRender(){
+    pacmanRenderer.drawRedSquare();
+  }
+
+  public Canvas getCanvas() {
     return canvas;
   }
 }

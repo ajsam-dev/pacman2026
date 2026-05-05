@@ -12,6 +12,9 @@ public class PacmanController {
     this.pacmanView = pacmanView;
   }
 
+  public void update(){
+    
+  }
   
 
   
