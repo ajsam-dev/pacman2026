@@ -33,7 +33,7 @@ public enum TileType {
         return GATE;
 
       default:
-        throw new IllegalArgumentException("Unknown tile: " + c);
+        return EMPTY;
     }
   }
 }
